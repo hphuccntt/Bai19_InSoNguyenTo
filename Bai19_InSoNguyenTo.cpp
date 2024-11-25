@@ -3,24 +3,23 @@ using namespace std;
 int main()
 {
 	int so;
-	int dem=0;
 	cout << "nhap so: "; cin >> so;
-	cout << " cac so chia het cho 1: " << so << endl;
-	for (int i = 1; i <= so; i++)
+	int dem = 0;
+	for (int m = 1; m <= so; m++)
 	{
-		if (so%i==0)
+		dem = 0;
+		for (int i = 1; i <= so; i++)
 		{
-			dem++;
+			if (m % i == 0)
+			{
+				dem++;
+			}
 		}
-	}
-	cout << "so dem= " << dem << endl;
-	if (dem==2)
-	{
-		cout << "so: " << so << " la so nguyen to\n";
-	}
-	else
-	{
-		cout << "so: " << so << " khong phai so nguyen to\n";
+		if (dem==2)
+		{
+			cout << m << " ";
+		}
+		
 	}
 	return 0;
 }
